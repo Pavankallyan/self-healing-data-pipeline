@@ -1,0 +1,50 @@
+device_id,timestamp,temp_c,humidity,battery_v,status,failure_reason
+,2026-09-25T05:17:00,22.69,49.0,3.37,offline,null:device_id
+,2026-09-25T08:41:00,21.09,43.2,3.6,offline,null:device_id
+SH-007,2026-09-25T07:11:00,21.1,48.0,3.78,maintenance,"invalid_value:status (value='maintenance', allowed ['online', 'idle', 'offline'])"
+SH-004,2026-09-25T01:42:00,85.0,32.0,3.54,offline,"out_of_range:temp_c (value='85.0', allowed -40.0..60.0)"
+SH-006,2026-09-25T16:03:00,19.21,150.0,3.83,offline,"out_of_range:humidity (value=np.float64(150.0), allowed 0.0..100.0)"
+SH-004,2026-09-25T18:09:00,22.28,56.0,low,online,bad_type:battery_v (value='low')
+SH-004,2026-09-25T01:37:00,23.7,48.1,3.84,maintenance,"invalid_value:status (value='maintenance', allowed ['online', 'idle', 'offline'])"
+SH-005,2026-09-25T14:51:00,85.0,43.7,3.67,online,"out_of_range:temp_c (value='85.0', allowed -40.0..60.0)"
+SH-010,2026-09-25T20:52:00,18.53,48.8,3.45,ERROR,"invalid_value:status (value='ERROR', allowed ['online', 'idle', 'offline'])"
+,2026-09-25T08:22:00,24.95,49.6,3.62,offline,null:device_id
+SH-009,2026-09-25T04:27:00,16.28,150.0,3.69,offline,"out_of_range:humidity (value=np.float64(150.0), allowed 0.0..100.0)"
+SH-008,,19.2,49.0,3.53,offline,null:timestamp
+SH-007,2026-09-25T04:52:00,23.41,25.2,low,idle,bad_type:battery_v (value='low')
+SH-001,,24.6,53.6,3.71,online,null:timestamp
+SH-008,,14.7,32.7,3.53,idle,null:timestamp
+SH-001,2026-09-25T03:28:00,twenty-two,47.9,3.54,online,bad_type:temp_c (value='twenty-two')
+SH-007,2026-09-25T07:47:00,twenty-two,52.7,3.64,offline,bad_type:temp_c (value='twenty-two')
+SH-004,2026-09-25T14:48:00,85.0,48.6,3.39,idle,"out_of_range:temp_c (value='85.0', allowed -40.0..60.0)"
+SH-005,2026-09-25T00:11:00,,41.4,3.46,online,null:temp_c
+,2026-09-25T07:46:00,28.39,32.4,3.16,offline,null:device_id
+SH-004,2026-09-25T09:55:00,twenty-two,51.1,3.73,online,bad_type:temp_c (value='twenty-two')
+,2026-09-25T22:39:00,23.69,42.0,3.43,offline,null:device_id
+SH-005,2026-09-25T04:35:00,,39.3,3.88,idle,null:temp_c
+SH-001,,20.57,43.7,3.65,online,null:timestamp
+,2026-09-25T00:01:00,23.78,35.1,3.73,offline,null:device_id
+SH-007,2026-09-25T08:19:00,twenty-two,68.2,3.58,online,bad_type:temp_c (value='twenty-two')
+SH-004,2026-09-25T11:31:00,20.21,46.8,3.59,maintenance,"invalid_value:status (value='maintenance', allowed ['online', 'idle', 'offline'])"
+SH-008,2026-09-25T08:10:00,22.91,36.6,3.76,maintenance,"invalid_value:status (value='maintenance', allowed ['online', 'idle', 'offline'])"
+SH-010,2026-09-25T02:28:00,22.49,41.6,low,offline,bad_type:battery_v (value='low')
+SH-005,2026-09-25T16:05:00,29.33,59.2,low,offline,bad_type:battery_v (value='low')
+SH-010,2026-09-25T22:38:00,85.0,49.2,3.61,online,"out_of_range:temp_c (value='85.0', allowed -40.0..60.0)"
+SH-009,2026-09-25T15:17:00,22.91,44.5,-1.0,online,"out_of_range:battery_v (value='-1.0', allowed 2.5..4.2)"
+SH-009,2026-09-25T07:18:00,,31.8,3.55,idle,null:temp_c
+SH-010,2026-09-25T23:33:00,21.53,150.0,3.52,online,"out_of_range:humidity (value=np.float64(150.0), allowed 0.0..100.0)"
+SH-004,2026-09-25T00:00:00,,37.1,3.54,online,null:temp_c
+SH-001,2026-09-25T19:53:00,,40.7,3.7,online,null:temp_c
+SH-006,2026-09-25T13:55:00,20.33,41.6,-1.0,idle,"out_of_range:battery_v (value='-1.0', allowed 2.5..4.2)"
+SH-007,2026-09-25T04:52:00,26.27,44.3,3.69,maintenance,"invalid_value:status (value='maintenance', allowed ['online', 'idle', 'offline'])"
+SH-010,2026-09-25T05:59:00,23.79,43.3,-1.0,offline,"out_of_range:battery_v (value='-1.0', allowed 2.5..4.2)"
+SH-003,2026-09-25T12:58:00,24.25,54.1,3.65,online,duplicate_row
+SH-009,2026-09-25T22:25:00,23.47,32.7,3.64,offline,duplicate_row
+SH-010,2026-09-25T20:54:00,24.06,43.4,3.57,idle,duplicate_row
+SH-001,2026-09-25T11:00:00,20.75,38.5,3.79,online,duplicate_row
+SH-006,2026-09-25T12:22:00,23.42,45.2,3.77,offline,duplicate_row
+SH-001,2026-09-25T11:11:00,20.62,47.1,3.73,idle,duplicate_row
+SH-006,2026-09-25T00:12:00,22.06,57.8,3.6,offline,duplicate_row
+SH-007,2026-09-25T07:02:00,23.91,48.1,3.68,idle,duplicate_row
+SH-006,2026-09-25T18:08:00,22.73,59.4,3.73,online,duplicate_row
+SH-007,2026-09-25T06:29:00,25.0,52.6,3.5,idle,duplicate_row

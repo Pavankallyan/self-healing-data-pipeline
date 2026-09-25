@@ -1,0 +1,53 @@
+{
+  "day1": {
+    "run_at": "2026-09-25T20:16:10.638428+00:00",
+    "rows_in": 1000,
+    "rows_out": 1000,
+    "rows_quarantined": 0,
+    "drift_events": [],
+    "drift_event_count": 0,
+    "quarantine_reasons": {},
+    "quarantine_file": "output/quarantine_day1.csv",
+    "outputs": [
+      "output/clean_day1.parquet",
+      "output/telemetry.db:telemetry_day1"
+    ]
+  },
+  "day2": {
+    "run_at": "2026-09-25T20:16:17.709643+00:00",
+    "rows_in": 1010,
+    "rows_out": 961,
+    "rows_quarantined": 49,
+    "drift_events": [
+      {
+        "type": "column_renamed",
+        "detected": "temperature_c",
+        "canonical": "temp_c",
+        "action": "alias_applied"
+      },
+      {
+        "type": "unexpected_column",
+        "column": "firmware_v",
+        "action": "dropped"
+      }
+    ],
+    "drift_event_count": 2,
+    "quarantine_reasons": {
+      "null:device_id": 6,
+      "invalid_value:status": 6,
+      "out_of_range:temp_c": 4,
+      "out_of_range:humidity": 3,
+      "bad_type:battery_v": 4,
+      "null:timestamp": 4,
+      "bad_type:temp_c": 4,
+      "null:temp_c": 5,
+      "out_of_range:battery_v": 3,
+      "duplicate_row": 10
+    },
+    "quarantine_file": "output/quarantine_day2.csv",
+    "outputs": [
+      "output/clean_day2.parquet",
+      "output/telemetry.db:telemetry_day2"
+    ]
+  }
+}
