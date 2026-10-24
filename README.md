@@ -63,6 +63,7 @@ self-healing-data-pipeline/
 │   ├── transform.py         # alias/drift handling, cleaning, temp_f derivation
 │   └── pipeline.py          # orchestrator: ingest→…→load→alert
 ├── run_pipeline.py          # CLI: python run_pipeline.py --day day1|day2
+├── tests/                   # pytest unit tests for validate.py + quarantine.py
 ├── data/                    # generated demo CSVs (gitignored)
 ├── output/                  # parquet, sqlite, quarantine CSVs, alerts.json (gitignored)
 ├── requirements.txt
@@ -99,6 +100,19 @@ docker run --rm self-healing-pipeline
 ```
 
 The container generates the data and runs both days end to end.
+
+### Running tests
+
+```bash
+pip install -r requirements.txt   # includes pytest
+python -m pytest tests/ -q
+```
+
+16 tests cover the validation rules (clean batch, missing/unexpected columns,
+bad types, out-of-range values, nulls, invalid categoricals, bad datetimes,
+duplicate rows, multi-reason joining, reason-count collapsing) and quarantine
+persistence (rows + reasons written, header-only file when nothing failed,
+failure_reason column added when missing).
 
 ## Key design decisions
 
